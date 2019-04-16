@@ -18,8 +18,7 @@ class LabeledList():
         return empty_list
     
     def __setitem__(self, key, value):
-        for i in range (0, len(self.values)):
-            if self.index[i] == key:
-                self.values[i] = value
+        if self.index == key:
+            self.values = value
         return self
 
